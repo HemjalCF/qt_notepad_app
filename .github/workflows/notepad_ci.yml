@@ -1,0 +1,36 @@
+name: Notepad App Project
+
+on:
+  push:
+    branches:
+      - 'main'
+
+env:
+  SOURCE_DIR:   ${{ github.workspace }}/qt_notepad_app
+  QT_VERSION:   5.15.10
+
+jobs:
+  build:
+    runs-on:  ubuntu-22.04
+
+    steps:
+      - name: (1) Checkout repository
+        uses: actions/checkout@v2
+
+      - name: (2) Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version:      ${{ env.QT_VERSION }}
+          host: 'linux'
+          target: 'desktop'
+          arch: 'gcc_64'
+
+      - name: (3) Build and Compile
+        working-directory: ${{ env.SOURCE_DIR }}
+        run:  |
+              ls
+              sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools -y
+              qmake -r ${{ env.SOURCE_DIR }}/notepad.pro
+              make
+              
+
