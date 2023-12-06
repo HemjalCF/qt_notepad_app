@@ -7,7 +7,7 @@ on:
 
 env:
   SOURCE_DIR:   ${{ github.workspace }}/qt_notepad_app
-  QT_VERSION:   5.15.10
+  QT_VERSION:   5.15.2
 
 jobs:
   build:
@@ -24,6 +24,7 @@ jobs:
           host: 'linux'
           target: 'desktop'
           arch: 'gcc_64'
+          modules: 'debug_info qtcharts qtdatavis3d'
 
       - name: (3) Build and Compile
         working-directory: ${{ env.SOURCE_DIR }}
