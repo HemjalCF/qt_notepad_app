@@ -6,7 +6,7 @@ on:
       - 'main'
 
 env:
-  SOURCE_DIR:   ${{ github.workspace }}/qt_notepad_app
+  SOURCE_DIR:   ${{ github.workspace }}/notepad
   QT_VERSION:   5.15.2
 
 jobs:
