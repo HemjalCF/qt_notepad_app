@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>img/copy.png</file>
+        <file>img/folder.png</file>
+        <file>img/info.png</file>
+        <file>img/paste.png</file>
+        <file>img/scissors.png</file>
+    </qresource>
+</RCC>
