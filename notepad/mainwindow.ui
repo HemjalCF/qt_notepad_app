@@ -73,6 +73,7 @@
    <addaction name="actionNew"/>
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
+   <addaction name="actionSave_as"/>
    <addaction name="separator"/>
    <addaction name="actionCut"/>
    <addaction name="actionCopy"/>
@@ -112,7 +113,7 @@
   <action name="actionSave_as">
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/save.png</normaloff>:/rec/img/save.png</iconset>
+     <normaloff>:/rec/img/save_as.png</normaloff>:/rec/img/save_as.png</iconset>
    </property>
    <property name="text">
     <string>Save as..</string>
